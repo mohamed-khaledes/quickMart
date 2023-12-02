@@ -1,0 +1,9 @@
+.checkout-page{
+    min-height:600px;
+    padding: 50px 0px;
+}
+.checkout-page h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}

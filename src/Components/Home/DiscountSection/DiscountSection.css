@@ -1,0 +1,7 @@
+.discount-section{
+    background:linear-gradient(to top left,var(--pink-one),var(--pink-two) );
+    color: white;
+}
+.discount-section img{
+    max-width:100%;
+}

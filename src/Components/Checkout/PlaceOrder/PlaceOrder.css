@@ -1,0 +1,22 @@
+.order-info{
+    color: gray;
+}
+.order-info div,
+.place-order div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*start place-order*/
+.place-order div p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.place-order div p span{
+    font-size: 15px;
+    color: gray;
+    font-weight: normal;
+}
+.place-order button{
+    width: 100% !important;
+}

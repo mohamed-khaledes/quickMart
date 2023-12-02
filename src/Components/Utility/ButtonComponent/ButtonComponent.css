@@ -1,0 +1,32 @@
+.btn-component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:18px;
+    width:250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: var(--blue-color);
+    border:2px solid var(--blue-color);
+    border-radius:5px;
+    color: var(--white-color);
+    font-weight: normal;
+    position: relative;
+    text-transform: capitalize;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.btn-component:active{
+    top: 3px;
+}
+.btn-component:hover{
+    color:var(--blue-color) !important;
+    background-color: var(--white-color) !important;
+}
+
+@media (max-width:768px) {
+    .btn-component{width: 150px; height: 45px; font-size: 15px;}
+}

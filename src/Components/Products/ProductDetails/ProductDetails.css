@@ -1,0 +1,11 @@
+.product-details{
+    padding-top: 50px;
+}
+.product-gallary-col{
+    min-height: 500px;
+}
+@media (max-width:776px) {
+    .product-details{
+        padding-top:5px;
+    }
+}

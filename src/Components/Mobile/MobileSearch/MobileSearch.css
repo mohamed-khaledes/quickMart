@@ -1,0 +1,49 @@
+.mobile-search{
+    margin-bottom: 10px;
+    height: 100px;
+    overflow: auto;
+    position: relative;
+    z-index: 100;
+    background-color: var(--white-color);
+}
+.form-parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    padding: 15px 5px;
+}
+.form-parent .mobile-logo{margin: 0 5px;}
+.form-parent .mobile-logo img{
+    width:90px;
+}
+.form-parent form{
+    width:70%;
+}
+.form-parent form input{
+    width:100%;
+    padding: 8px 0px 8px 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    caret-color:var(--black-color);
+    transition: all 0.3s;
+    box-shadow: 0 0 10px 0 gray;
+}
+.form-parent form input:focus{
+    box-shadow: 0 0 10px 0 gray;
+}
+.deliver-to-city{
+    cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.deliver-to-city span{
+    font-weight: bold;
+    margin-right: 10px;
+}

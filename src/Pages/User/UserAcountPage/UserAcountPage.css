@@ -1,0 +1,10 @@
+.user-page-row{
+    margin-top:80px !important;
+    min-height: 500px;
+}
+
+@media (max-width:767px) {
+    .user-page-row{
+        margin-top:0px !important;
+    }
+}

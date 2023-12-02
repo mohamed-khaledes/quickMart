@@ -1,0 +1,28 @@
+.admin-order-info{
+    background-color: var(--white-color);
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+}
+.admin-order-info p{
+    font-size: 18px;
+}
+.admin-order-info p span{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.admin-order-state{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.admin-order-total{
+    font-size: 25px !important;
+}
+.admin-order-state select{
+    text-transform: capitalize;
+    min-width:200px;
+    padding: 5px;
+}

@@ -1,0 +1,12 @@
+.home-category{
+    max-height: 250px;
+    min-height: 250px;
+}
+
+@media (max-width:767px) {
+    .home-category{
+        min-height:170px;
+        margin: 0 !important;
+        padding: 5px !important;
+    }
+}

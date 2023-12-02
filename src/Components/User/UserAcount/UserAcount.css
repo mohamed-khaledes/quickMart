@@ -1,0 +1,25 @@
+.profile-title{
+    text-align: left;
+}
+.user-acount-card{
+    background-color: var(--white-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.user-acount-card p{
+    color:var(--light-blue);
+}
+.user-acount-card p span{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--black-color);
+}
+.user-acount-card button{
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+}

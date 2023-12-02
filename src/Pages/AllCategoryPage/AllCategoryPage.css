@@ -1,0 +1,8 @@
+.all-category-page{
+    background-color: var(--white-color);
+    min-height: 600px;
+    padding: 30px;
+}
+.all-categores-content{
+    min-height: 600px;
+}

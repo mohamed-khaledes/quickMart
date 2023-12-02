@@ -1,0 +1,19 @@
+.user-personal-address-card{
+    text-align: left;
+    background-color: var(--white-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.user-personal-address-card-phone{
+    font-weight: bold;
+    font-size: 20px;
+}
+.user-personal-address-card button{
+    width: 50px;
+    height: 30px;
+    margin: 0px 5px;
+    font-size:10px !important;
+    text-transform: uppercase;
+}
+.user-personal-address-card .address-card-title{text-transform: capitalize;}

@@ -1,0 +1,77 @@
+.coupon_box h1, .coupon_box h2, .coupon_box h3, .coupon_box h4{margin: 0}
+
+.coupon_box{
+  background: #ffc107;
+    background: linear-gradient(to right, #e3ae0e, #f4de9c);
+background: -webkit-linear-gradient(to right, #e3ae0e, #f4de9c); 
+ width: 250px;
+ border-radius: 7px;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-family: 'Tahoma', sans-serif;
+  position: relative;
+  margin: 5rem auto;
+}
+
+.coupon_box .title{
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 20px
+}
+
+.coupon_box .how_much{
+  font-size: 55px;}
+.coupon_box h3{
+  font-size: 35px;
+}
+.coupon_box h3 ,
+.coupon_box .how_much{
+  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center
+}
+
+.coupon_box .btn{
+  color: white;
+}
+.coupon_box .btn:hover{box-shadow: 0 2px 10px rgba(0,0,0,0.25)}
+.coupon-body{
+  padding-bottom: 3rem;
+  border-bottom: 2px dashed rgba(0,0,0,0.2);
+  position: relative;
+}
+.coupon-body::before{
+  content: '100';
+  position: absolute;
+  color: rgba(255,255,255,0.15);
+  top: 0%;
+  left: 5%;
+  font-size:100px;
+  font-weight: bold;
+}
+
+.coupon_box::before,
+.coupon_box::after{
+  content: '';
+  position: absolute;
+  top:55%;
+  background: #fff;
+  width: 20px;
+  height: 30px;
+  z-index: 1;
+}
+.coupon-update-box button{
+  color: #ffc107;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: 0.3s all;
+    --webkit-transition: 0.3s all;
+    --o-transition: 0.3s all;
+    --moz-transition: 0.3s all;
+}
+.coupon-update-box button:hover{
+  color: white;
+  background-color:#ffc107;
+}

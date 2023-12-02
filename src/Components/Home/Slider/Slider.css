@@ -1,0 +1,20 @@
+.carousel-item{
+    height:100%;
+}
+/* @media (max-width:768px) {
+   .carousel-item{height: 200px;} 
+} */
+@media (max-width:576px) {
+    /* .carousel-inner{
+    height: 170px !important;
+    overflow: hidden;
+    } */
+    .carousel.slide{
+    height: 75px;
+    }
+    .carousel-indicators,
+    .carousel-control-prev,
+    .carousel-control-next{
+        opacity: 0 !important;
+    }
+}

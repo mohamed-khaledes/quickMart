@@ -1,0 +1,126 @@
+.navBar{
+    background-color:var(--primary-color);
+    height:65px;
+}
+.navBar-login .nav-link{
+    min-width: 90px;
+    font-weight: 600;
+    transition: all 0.3s !important;
+}
+.navBar-login .nav-link:hover{
+    opacity: 0.6;
+}
+.font{
+    font-weight: 600;
+    font-family: 'Almarai', sans-serif;
+    font-size: 15px;
+}
+.noon-logo img{
+    width: 100px;
+}
+.egypt-flag{
+    max-width:40px;
+    margin-right: 5px;
+}
+.dilver{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-weight:normal;
+    margin-left: 15px;
+    cursor: pointer;
+    min-width: 155px;
+    font-size: 15px;
+}
+.search{
+    width:100%;
+}
+.navBtn{
+    background-color: white;
+    color: black;
+    border-radius:5px;
+    border: none;
+    box-shadow: 3px 3px 3px #ccc;
+    position: relative;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    width:80px;
+    height: 40px;
+    color: gray;
+    margin: auto 3px;
+}
+.navBtn:active{
+    top:2px;
+}
+.lang{
+    width: 60px;
+}
+/*start style of dropdown*/
+.navBar .dropdown{
+    width:fit-content;
+}
+.navBar .dropdown .dropdown-toggle{
+    position: relative;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: white !important;
+    color: gray !important;
+    font-weight: normal !important;
+    font-size: 15px;
+    border-radius: 5px;
+    height:40px;
+}
+.navBar .dropdown .dropdown-toggle::after{
+    position: absolute;
+    right:3px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navBar .dropdown .dropdown-toggle:hover,
+.navBar .dropdown .dropdown-toggle:checked,
+.navBar .dropdown .dropdown-toggle:active
+{
+    /* background-color: var(--primary-color) !important; */
+    /* border-color: var(--primary-color); */
+    color: gray !important;
+}
+.navBar .dropdown-menu{
+    width: 100%;
+}
+/*End style of dropdown*/
+
+/*Start cart link and wishlist link*/
+.custom-nav-link{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+}
+.custom-nav-link svg{
+    color:#808080ba;
+    font-size: 20px;
+}
+.custom-nav-link:hover{
+    color: var(--blue-color);
+}
+.cart-badge{
+    position: absolute;
+    line-height: 1.8;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--blue-color);
+    top: -15px;
+    right: -10px;
+}
+/*End cart link and wishlist link*/

@@ -1,0 +1,52 @@
+.payment-methods{
+    background-color: var(--white-color);
+    text-align: left;
+    padding: 0;
+    border-radius:10px;
+}
+.payment-methods label{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px 10px;
+    text-transform: capitalize;
+}
+.payment-methods input{
+    width:18px;
+    height:18px;
+}
+.payment-methods form .radio-parent{
+    padding:20px;
+    border-bottom: 1px solid var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.payment-methods .payment-icons img{
+    max-width:40px;
+    margin-right: 5px;
+}
+.payment-methods .radio-parent span{
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 12px;
+    padding:3px 5px;
+    background-color: var(--green-color);
+    border-radius:3px;
+}
+/*select address*/
+.choose-address-wrapper{
+    max-width:250px;
+}
+.custom-select{
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: gray;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.custom-select option{
+    font-size: 16px;
+    text-transform: capitalize;
+}

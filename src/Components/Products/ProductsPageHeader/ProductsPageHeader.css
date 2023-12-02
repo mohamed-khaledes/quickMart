@@ -1,0 +1,72 @@
+.products-page-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top:30px;
+}
+@media (max-width:767px) {
+    .products-page-header{margin-top: 60px;}
+}
+.search-results-count{
+    font-size: 18px;
+}
+.control-options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products-page-header .sort,
+.products-page-header .grid{
+    margin-right: 10px;
+}
+.products-page-header .sort label,
+.products-page-header .grid label{
+    font-weight: bold;
+    color: var(--light-blue);
+    font-size: 15px;
+    margin-right: 5px;
+}
+.products-page-header .sort select,
+.products-page-header .grid select{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    color:var(--light-blue);
+}
+.products-page-header .sort select option,
+.products-page-header .grid select option{
+    font-size: 15px;
+    color: var(--black-color);
+    font-weight: normal;
+}
+/*=========================================================*/
+.dropdown-btn{
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border-color: var(--light-blue);
+    outline: none;
+    width: 200px;
+}
+.drop-down-menu_EMFQP{
+    background-color: white;
+    width: 200px !important;
+}
+.dropdown-items div{
+    border-bottom: 1px solid var(--light-blue);
+    background-color: white;
+    color: black;
+    padding: 5px;
+    text-align: left;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.dropdown-items div:hover{
+    background-color: var(--blue-color);
+    color: white;
+}

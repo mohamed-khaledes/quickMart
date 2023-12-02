@@ -1,0 +1,21 @@
+.cart-page{
+    min-height: 100vh;
+}
+.cart-page-title{
+    font-weight: bold;
+    text-align: left;
+}
+.cart-page-title span{
+    font-weight: normal;
+    color: gray;
+    font-size: 15px;
+}
+.empty-cart button{
+    margin: auto;
+}
+.empty-cart img{
+    max-width: 100%;
+}
+
+.cart-page .btn-box{width: 100% !important;}
+.cart-page .btn-box .btn-component{width: 100% !important;}

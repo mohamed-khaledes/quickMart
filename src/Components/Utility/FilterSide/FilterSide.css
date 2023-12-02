@@ -1,0 +1,48 @@
+.filtring{
+    padding:50px 0px 0px;
+    text-align: left;
+}
+/* .filtring h2,
+.filtring h3{
+    text-transform: uppercase;
+} */
+.filtring ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.filtring ul li{
+    text-transform: capitalize;
+}
+.filtring ul li label{
+    font-size: 18px;
+    color: black;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.filtring ul li label:hover{
+    color: var(--blue-color);
+}
+.filtring ul li input{
+    margin: 0 5px;
+}
+.filtring .brand-filter,
+.filtring .price-filter,
+.filtring .color-filter{
+    margin: 30px 0px;
+}
+.filtring .price-filter label{
+    font-weight: 600;
+    margin: 0 5px;
+}
+.filtring .price-filter input{
+    width: 60px;
+}
+.filtring .color-filter label{
+    font-weight: 600;
+    margin: 0 5px;
+}

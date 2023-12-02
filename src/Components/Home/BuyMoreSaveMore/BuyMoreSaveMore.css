@@ -1,0 +1,53 @@
+.buy-more-save-more-section{
+    min-height: 500px;
+    height: auto;
+    text-align: start;
+}
+.buy-more-save-more-section .first-col{
+    background-color: white;
+}
+.buy-more-save-more-section .items-wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 100%;
+}
+.buy-more-save-more-section .items-wrapper .item{
+    flex-basis:48%;
+}
+.buy-more-save-more-section .item{
+    background-color: var(--bg-color);
+    text-align: start;
+}
+.buy-more-save-more-section .first-col,
+.buy-more-save-more-section .second-col,
+.buy-more-save-more-section .third-col{
+    padding: 15px;
+}
+
+.buy-more-save-more-section .item img{
+    max-width: 100%;
+    max-height: 100%;
+}
+/*second col*/
+.buy-more-save-more-section .second-col{
+    background-color: var(--primary-color);
+}
+.buy-more-save-more-section .second-col .item{
+    background-color: white;
+    border-radius: 10px;
+}
+/*third col*/
+.buy-more-save-more-section .third-col{
+    background-color:white;
+    padding:3px;
+}
+.buy-more-save-more-section .third-col .item{
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    margin: 5px 0;
+    overflow: hidden;
+    height:220px;
+    width: 100%;
+}

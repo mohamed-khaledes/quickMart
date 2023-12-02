@@ -1,0 +1,32 @@
+.admin-add-category{
+    text-align: left;
+    position: relative;
+}
+.admin-add-category input{
+    margin: 20px 0px;
+    width:70%;
+    padding:10px;
+    border: none;
+    outline:none;
+    box-shadow: 5px 5px 10px #dee2e6;
+    border-radius: 5px;
+}
+.upload-photo-parent label img{
+    width:150px;
+    display: block;
+    cursor: pointer;
+}
+.upload-photo-parent input{
+    display: none;
+}
+.admin-add-category .spinner-component{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7fac7;
+}

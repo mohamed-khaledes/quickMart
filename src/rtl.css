@@ -1,0 +1,61 @@
+/*
+    #SUMMARY FOR ELZERO MULTINGUAL WEBSITES COURSE#
+
+    == Multingual notes and tricks ==
+=================================
+
+* Problems and solutions part 1
+
+--Don't start with arabic design
+--programmers note : Don't Use Words Direct in template.
+--Margin and padding for parents better than childs
+
+
+* problems and solutions part 2
+
+-- Padding and margin left + right better than one direction.
+-- Don't forget page direction Arrtribute .All block elements depend on it.
+-- HighLight what you will edit soon .
+-- Make the direction edits in the same time .
+
+* Problems and solutions part 3
+
+-- Don't Ever forget comments and ordering the elements
+-- Use inline-block intested of float if you don't need float 
+-- Rtl file for directions only . don't write anything witout directions
+-- Rtl file after main file
+
+* Problems and solutions part 4
+
+-- Consider word length when specify element width
+-- Don't destroy nesting when creating rtl file
+-- Don't use elements that need to change like arrows. use pseudo elements
+
+* Amazing features to help you
+-- <bdi></bdi>
+-- Attribute dir="auto"
+-- text-align : [start | end]
+-- float :[inline-start | inline-end]
+
+* Helpers classes
+-- Use a framework . [Bootstrap,Foundation,Sematic UI]
+-- Float classes [pull-left | pull-right]
+-- Text-align classes [text-right | text-left]
+-- Direction classes [ltr-dir | rtl-dir]
+
+
+* Properties you need to focus on part 1
+-- margin 
+-- padding
+-- border-radius
+-- pseudo elements
+-- border
+
+
+* Properties you need to focus on part 2
+-- box-shadow 
+-- float
+-- transform:rotate()
+-- text-align
+-- position
+*/

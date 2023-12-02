@@ -1,0 +1,22 @@
+/*Start not found*/
+.no-data-img-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .not-found-title{
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bold;
+    color: gray;
+  }
+  .no-data-img{width:300px !important;}
+  /*End not found*/
+  
+  @media  (max-width:768px) {
+      .no-data-img{
+        width: 250px !important;
+      }
+      .not-found-title{font-size: 30px;}
+  }
+  

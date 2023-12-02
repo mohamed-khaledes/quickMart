@@ -1,0 +1,127 @@
+.product-card{
+    height:400px !important;
+    margin: 5px 0px;
+}
+.card{
+    padding:0 5px;
+    max-width: 100% !important;
+    width: 240px;
+    height:400px !important;
+    min-height:400px;
+    max-height:100%;
+    border-radius:10px;
+    overflow: hidden;
+    padding: 8px;
+    background: white !important;
+    border: 1px solid #eee !important;
+}
+.pricing .pricing-child del{
+    font-weight: 600;
+    color: gray;
+}
+.card .card-img-wrapper{
+    position: relative;
+    padding:20px;
+    max-height: 70%;
+    min-height: 70%;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    /* background: #f8f8f9; */
+    background-color: #f8f8f952;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.card-img-wrapper .quantity{
+    background: white;
+    color: gray;
+    bottom: 0;
+}
+.card-img-wrapper .quantity,
+.card-img-wrapper .best-seller{
+    left: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 2px 5px;
+    text-transform: capitalize;
+    position: absolute;
+    margin: 0 5px;
+}
+.card-img-wrapper .best-seller{
+    background:rgb(64 69 83);
+    color:white;
+    top:0;
+}
+.card .card-img-content .card-img{
+    width:100% !important;
+    max-width: 100%;
+}
+.card-body{
+    text-align: start;
+    background-color: var(--white-color);
+}
+.card .card-text{
+    font-size: 14px;
+    height: 25px;
+    overflow: hidden;
+    margin: 0;
+}
+.card .card-title{
+    font-size: 15px !important;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.pricing .pricing-child {
+    font-size: 12px;
+    margin: 0;
+}
+.favorite img{max-width: 100%;}
+.pricing .currency{font-size:12px;font-weight: 500;}
+.pricing-rating-parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.pricing .pricing-child .price,
+.pricing .pricing-child .price-after-discount{
+    font-weight: bold;
+    margin:3px;
+    font-size:16px;
+}
+.favorite{
+    font-size: 20px;
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.rating{
+    font-weight: bold;
+}
+.rating span:nth-child(2){
+    color: gold;
+    margin-left: 2px;
+}
+.badg{
+    background-color: var(--primary-color);
+    color: #000000ab;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 5px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: fit-content;
+}

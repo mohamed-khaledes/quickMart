@@ -1,0 +1,9 @@
+.shop-products-page{
+    min-height: 600px;
+}
+.products-card {
+    margin-bottom: 20px;
+}
+.shop-products-page .products-card .card {
+    max-width: 100%;
+}

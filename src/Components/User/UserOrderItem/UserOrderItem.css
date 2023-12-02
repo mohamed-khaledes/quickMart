@@ -1,0 +1,28 @@
+.user-all-orders-item{
+    background-color: var(--white-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.user-all-orders-item .title{
+    padding: 5px;
+    margin: 0 ;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: start;
+}
+.order-item-info{
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.order-item-info p{
+    font-weight: 600;
+    font-size: 16px;
+}
+.order-item-info p span:nth-of-type(2){
+    color: var(--blue-color);
+    font-size: 16px;
+}

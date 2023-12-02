@@ -1,0 +1,8 @@
+.brands{
+    background: linear-gradient(to top left,var(--pink-one),var(--pink-two));
+}
+.brands .brands-swiper-slide{
+    width: 250px !important;
+    height:100px !important;
+    margin-right: 10px;
+}

@@ -1,0 +1,12 @@
+.products-section{
+    background-color: rgb(241, 244, 253);
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+@media (max-width:767px) {
+    .products-section{
+        margin: 0 !important;
+        padding: 5px !important;
+    }
+}
