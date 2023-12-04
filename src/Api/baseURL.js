@@ -12,5 +12,4 @@ import axios from "axios";
 
 // after deploy on render
 const baseUrl = axios.create({baseURL:"https://noon-clone-server.onrender.com"})
-
 export default baseUrl;

@@ -3,6 +3,7 @@ import { Col } from 'react-bootstrap'
 import './CategoryCard.css'
 import { Link } from 'react-router-dom'
 const CategoryCard = ({title,img,id}) => {
+
   return (
     <Col xs="6" sm="6" md="4" lg="3">
     <div className='category-card'>
