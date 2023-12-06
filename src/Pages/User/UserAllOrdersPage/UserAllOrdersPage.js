@@ -18,10 +18,9 @@ const UserAllOrdersPage = () => {
         <div className='title'>
         <h3 className='custom-title'>Results {resuts}</h3>
         </div>
+          <div className='user-all-orders min-vh-100 position-relative'>
         {
           loading===false?
-          <div className='user-all-orders'>
-            {
               ordersData?
               ordersData.map((item,index)=>{
                 return(
@@ -29,10 +28,9 @@ const UserAllOrdersPage = () => {
                 )
               })
               :<NotFoundData />
-            }
-        </div>
-          :<SpinnerComponent/>
-        }
+            :<SpinnerComponent/>
+          }
+          </div>
         </Col>
     </Row>
     <Row>

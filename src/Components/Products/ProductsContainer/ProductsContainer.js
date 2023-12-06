@@ -16,7 +16,8 @@ const ProductsContainer = ({title,btntitle,pathValue,products}) => {
             <ProductsCard favProduct={wishlist} item={item}/>
           </Col>
           ) 
-          :null}
+          :null
+          }
         </Row>
     </Container>
   )

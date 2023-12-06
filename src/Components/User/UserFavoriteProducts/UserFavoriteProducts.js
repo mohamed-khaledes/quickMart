@@ -8,7 +8,7 @@ const UserFavoriteProducts = () => {
   const [wishlist,loading,wishlistItems] = WishlistHook()
   return (
     <div className='user-favorite-products'>
-        <Row>
+        <Row className='min-vh-100 position-relative'>
         {
           loading===false?
           wishlistItems?

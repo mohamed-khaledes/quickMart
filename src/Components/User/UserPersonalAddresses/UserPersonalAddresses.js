@@ -10,7 +10,7 @@ const UserPersonalAddresses = () => {
   const [addresses,loading] = GetAllUserAddressesHook();
   return (
     <div className="user-personal-addresses">
-      <Row>
+      <Row className="position-relative">
       {loading === false ? (
         addresses?
         addresses.data? (

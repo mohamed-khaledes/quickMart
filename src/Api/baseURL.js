@@ -8,8 +8,8 @@ import axios from "axios";
 // custom axios by axios.create
 
 // before deploy on render
-// const baseUrl = axios.create({baseURL:"http://127.0.0.1:8000"})
+const baseUrl = axios.create({baseURL:"http://127.0.0.1:8000"})
 
 // after deploy on render
-const baseUrl = axios.create({baseURL:"https://noon-clone-server.onrender.com"})
+// const baseUrl = axios.create({baseURL:"https://noon-clone-server.onrender.com"})
 export default baseUrl;

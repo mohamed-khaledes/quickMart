@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsByCategory } from "../../Redux/actions/productAction";
 const VeiwAllProductsCategoryHook = (id) => {
@@ -6,9 +6,11 @@ const VeiwAllProductsCategoryHook = (id) => {
     let page=""
     const dispatch = useDispatch();
     const products = useSelector((state) => state.productReducer.allProductsByCategory);
-    const loading = useSelector((state) => state.productReducer.loading);
+    const [loading,setLoading] = useState(true)
     const getAllProductsFn = async () => {
+      setLoading(true)
       await dispatch(getAllProductsByCategory(limit,page,id));
+      setLoading(false)
     };
     useEffect(() => {
       getAllProductsFn();
@@ -40,9 +42,9 @@ const VeiwAllProductsCategoryHook = (id) => {
       }
    // On press function for pagenation
    const onPress = async (page) => {
-    await dispatch(
-      getAllProductsByCategory(limit,page,id)
-    );
+     setLoading(true)
+    await dispatch(getAllProductsByCategory(limit,page,id));
+      setLoading(false)
   };
 
   return[items,pageCount,onPress,loading]
