@@ -20,4 +20,6 @@
  * API
  * Axios
 
- * Live > https://noon-clone-client.onrender.com/
+ * Live > https://quickmart-8837.onrender.com/
+
+
