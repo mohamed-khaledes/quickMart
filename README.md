@@ -1,5 +1,6 @@
-# "noon clone client"
-![noon-clone](https://github.com/mohamed-khaledes/noon-clone-client/assets/83855189/ca110be6-45d1-47c4-8b56-8c94e8582ec9)
+# "Quick Mart"
+![quickMart](https://github.com/mohamed-khaledes/quickMart/assets/83855189/3891b619-8f43-4c88-a27c-b918ad1b331e)
+
 
 ## noon clone application 
 
@@ -17,9 +18,6 @@
  * redux
  * reduxToolkit
  * API
- * postman
- * nodejs
- * expressjs
- * MongoDB
+ * Axios
 
  * Live > https://noon-clone-client.onrender.com/
