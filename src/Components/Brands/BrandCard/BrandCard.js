@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const BrandCard = ({id,img,title}) => {
   return (
     <div className='brand-card mb-3'>
-      <Link to={`/product/brand/${id}`}>
+      <Link to={`/product/brand/${id}`} aria-label='go to product by brand'>
     <div className='brand-img'>
       <img loading="lazy" src={img} alt={title}></img>
     </div>

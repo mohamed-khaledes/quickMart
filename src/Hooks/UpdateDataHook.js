@@ -2,7 +2,7 @@ import baseUrl from "../Api/baseURL";
 
 
 // if we need to update data without images
-const UpdateDataHook = async(url,params)=>{
+export const UpdateDataHook = async(url,params)=>{
     // url for our url from api
     // params if we need to put a params 
     // params => {key:"value"}
@@ -14,7 +14,7 @@ const UpdateDataHook = async(url,params)=>{
 }
 
 // if we need to update data with images
-const UpdateDataHookWithImage = async(url,params)=>{
+export const UpdateDataHookWithImage = async(url,params)=>{
     const config ={
         headers:{"Content-type":"multipart/form-data",
         "Authorization":`Bearer ${localStorage.getItem("token")}`}
@@ -22,5 +22,3 @@ const UpdateDataHookWithImage = async(url,params)=>{
     const res = await baseUrl.put(url,params,config)
     return res
 }
-
-export {UpdateDataHook,UpdateDataHookWithImage};

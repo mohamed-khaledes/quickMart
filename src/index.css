@@ -1,7 +1,9 @@
 @import url(./css/custom_css.css);
 /*custom colors*/
 :root{
-  --primary-color:#feee00;
+  /* --primary-color:#feee00; */
+  --primary-color:#3B5D50;
+  --color-secondary:#F9BF29;
   --bg-color:#f7f7fa;
   --secondary-color:#fcfbf4;
   --black-color:black;
@@ -9,7 +11,8 @@
   --pink-one: rgb(255 207 145);
   --pink-two: rgb(255 199 186);
   --pink-three: #ffa5b1;
-  --blue-color:#2b4cd7;
+  --blue-color:#F9BF29;
+  /* --blue-color:#2b4cd7; */
   --light-blue:rgb(178 188 211);
   --green-color:rgb(56 174 4);
   --custom-gold:#ffa500;

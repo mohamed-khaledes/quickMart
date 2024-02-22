@@ -2,7 +2,6 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import AdminSidebar from '../../../Components/Admin/AdminSidebar/AdminSidebar';
 import AdminAddCoupon from '../../../Components/Admin/AdminAddCoupon/AdminAddCoupon';
-import { ToastContainer } from 'react-toastify';
 
 const AdminAddCouponPage = () => {
       return (
@@ -15,7 +14,6 @@ const AdminAddCouponPage = () => {
               <AdminAddCoupon />
             </Col>
         </Row>
-        <ToastContainer />
     </Container>
       )
 }

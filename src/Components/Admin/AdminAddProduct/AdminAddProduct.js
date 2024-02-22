@@ -17,7 +17,7 @@ const AdminAddProduct = () => {
     priceAfterDiscount,onChangePriceAfter,
     qty,onChangeQty,handleSubmit,
   onSelectCategory,category,
-  onSelectBrand,brands,brandId,catId,
+  onSelectBrand,brands,brandId,,
   colors,removeColor,
   showColor,onChangeColor,handleChangeComplete,
   options,onSelect,onRemove]
@@ -28,7 +28,7 @@ const AdminAddProduct = () => {
       <h4 className='custom-title'>Add product</h4>
  <MultiImageInput
       images={images}
-      setImages={setImages}
+      // setImages={setImages}
       theme={"light"}
       max={5}
       allowCrop={false}

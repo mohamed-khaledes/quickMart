@@ -7,7 +7,6 @@ import Pagenation from '../Utility/Pagenation/Pagenation'
 import UsersRateItem from './UsersRateItem'
 import GetAllReviewsHook from '../../CustomHooks/Reviews/GetAllReviewsHook'
 import { useParams } from 'react-router-dom'
-import SpinnerComponent from '../../Components/Utility/SpinnerComponent/SpinnerComponent'
 const RateContainer = ({ratingAvg,ratingQty}) => {
     const id = useParams()
     let ID = id.id
@@ -36,7 +35,7 @@ const RateContainer = ({ratingAvg,ratingQty}) => {
                 )
                 :<Col><p>No reviews yet</p></Col>
                 :<Col><p>No reviews yet</p></Col>
-                :<SpinnerComponent />
+                :null
             }
         </Row>
         <Row>

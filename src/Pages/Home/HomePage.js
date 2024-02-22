@@ -10,6 +10,7 @@ import banner01 from "../../imgs/banner10.jpg";
 import banner02 from "../../imgs/banner01.jpg";
 import banner03 from "../../imgs/banner03.jpg";
 import VeiwHomeProductsHook from "../../CustomHooks/Product/VeiwHomeProductsHook";
+import Landing from "../../Components/Home/Landing/Landing";
 
 const HomePage = () => {
   const [
@@ -22,8 +23,9 @@ const HomePage = () => {
   ] = VeiwHomeProductsHook();
   return (
     <div className="home">
+      <Landing />
       <Container className="page home-page p-0">
-        <Slider />
+        {/* <Slider /> */}
         <HomeCategory />
         <BuyMoreSaveMore />
         <Products title={"mobile"}

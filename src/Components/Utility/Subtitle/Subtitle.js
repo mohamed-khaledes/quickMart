@@ -7,13 +7,11 @@ const Subtitle = ({title,btntitle,pathValue}) => {
         <div className='title'>
             <h3>{title}</h3>
         </div>
-        {btntitle? (
-        <Link to={`${pathValue}`} style={{textDecoration:"none"}}>
+        <Link to={pathValue || "/"} aria-label="more">
         <div className='btn-title'>
-            <button>{btntitle}</button>
+            <button aria-label='more'>more</button>
         </div>
         </Link>
-        ): null}
     </div>
   )
 }

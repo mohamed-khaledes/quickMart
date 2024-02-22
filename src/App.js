@@ -12,6 +12,7 @@ import BrandsPage from './Pages/BrandsPage/BrandsPage';
 import ShopProductsPage from './Pages/Products/ShopProductsPage/ShopProductsPage';
 import ProductDetailsPage from './Pages/Products/ProductDetailsPage/ProductDetailsPage';
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
+// Start admin routes
 import AdminProductsMangementPage from './Pages/Admin/AdminProductsMangementPage/AdminProductsMangementPage'
 import AdminOrdersMangementPage from './Pages/Admin/AdminOrdersMangementPage/AdminOrdersMangementPage'
 import AdminAddBrandPage from './Pages/Admin/AdminAddBrandPage/AdminAddBrandPage'
@@ -19,6 +20,8 @@ import AdminAddCategoryPage from './Pages/Admin/AdminAddCategoryPage/AdminAddCat
 import AdminAddSubCategoryPage from './Pages/Admin/AdminAddSubCategoryPage/AdminAddSubCategoryPage'
 import AdminAddProductPage from './Pages/Admin/AdminAddProductPage/AdminAddProductPage'
 import AdminOrderDetailsPage from './Pages/Admin/AdminOrderDetailsPage/AdminOrderDetailsPage';
+import AdminAddCouponPage from './Pages/Admin/AdminAddCouponPage/AdminAddCouponPage';
+// End admin routs
 import UserAllOrdersPage from './Pages/User/UserAllOrdersPage/UserAllOrdersPage';
 import UserAcountPage from './Pages/User/UserAcountPage/UserAcountPage';
 import UserFavoriteProductsPage from './Pages/User/UserFavoriteProductsPage/UserFavoriteProductsPage';
@@ -31,7 +34,6 @@ import AdminUpdateProductPage from './Pages/Admin/AdminUpdateProductPage/AdminUp
 import ForgetPasswordPage from './Pages/Authentication/ForgetPasswordPage/ForgetPasswordPage';
 import VerifyCodePage from './Pages/Authentication/VerifyCodePage/VerifyCodePage';
 import ResetPasswordPage from './Pages/Authentication/ResetPasswordPage/ResetPasswordPage';
-import AdminAddCouponPage from './Pages/Admin/AdminAddCouponPage/AdminAddCouponPage';
 import ScrollToTopBtn from './Components/Utility/ScrollToTopBtn/ScrollToTopBtn'
 import ProtectRoutsHook from './CustomHooks/Auth/ProtectRoutsHook';
 import ProtectRouts from "./Components/Utility/ProtectRouts/ProtectRouts";

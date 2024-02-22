@@ -1,12 +1,10 @@
 import React from "react";
 import "./AllCategoryPage.css";
 import AllCategoryContainer from "../../Components/Category/AllCategoryContainer";
-import Subtitle from "../../Components/Utility/Subtitle/Subtitle";
 
 const AllCategoryPage = () => {
   return (
     <div className="page all-category-page container">
-      <Subtitle title={"All Categories"} />
       <AllCategoryContainer />
     </div>
   );

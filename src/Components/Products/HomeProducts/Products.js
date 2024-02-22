@@ -11,7 +11,7 @@ const Products = ({title,items,loading}) => {
   const [wishlist] = ProductsContainerHook()
   return (
     <Container className='products-section'>
-        <Subtitle title={title} btntitle={"more"} pathValue="/shopProductsPage"/>
+        <Subtitle title={title}  pathValue="/shopProductsPage"/>
       <Row>
       <div className='custom-carousel-parent'>
       <CustomCarousel show={5}>

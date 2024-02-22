@@ -1,20 +1,24 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { getAllCategoryAction,getAllCategoryPageAction } from '../../Redux/actions/categoryAction'
 
 const AllCategoryPageHook = (limit) => {
+  // states 
+  const [loading,setLoading]=useState(true)
  // put useDispatch in a varialbe
   // to run the redux
   const dispatch = useDispatch()
   // get what we need from the data in backend (api) by useSelector
   // to get state from redux
   const categoryRes = useSelector((state) => state.categoryReducer.allCategories)
-  const loading = useSelector((state) => state.categoryReducer.loading)
+  // const loading = useSelector((state) => state.categoryReducer.loading)
   // run the dispatch function by useEffect hook
   // will execute when first load
   useEffect(()=>{
     const get =async()=>{
+      setLoading(true)
       await dispatch(getAllCategoryAction(limit))
+      setLoading(false)
     }
     get()
   },[])

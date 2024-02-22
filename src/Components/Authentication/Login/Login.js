@@ -6,7 +6,6 @@ import { faLock, faXmark } from '@fortawesome/free-solid-svg-icons'
 import ButtonComponent from '../../Utility/ButtonComponent/ButtonComponent'
 import LoginHook from '../../../CustomHooks/Auth/LoginHook'
 import SpinnerComponent from '../../../Components/Utility/SpinnerComponent/SpinnerComponent'
-import { ToastContainer } from 'react-toastify'
 const Login = ({handleClick}) => {
   //start login operations
   const [loading,email,password,onChangeEmail,onChangePassword,onSubmit,isPress]= LoginHook()
@@ -85,7 +84,6 @@ const Login = ({handleClick}) => {
         </div>
       </div>
       {isPress===true?loading===true?<SpinnerComponent/>:null:null}
-      <ToastContainer />
         </div>
   )
 }

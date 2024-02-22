@@ -3,15 +3,15 @@ import { useDispatch,useSelector } from 'react-redux'
 import Notify from '../../UseNotification'
 import { addCoupon } from '../../../Redux/actions/couponAction'
 const AddCouponHook = () => {
-  const dispatch = useDispatch()
-  const res = useSelector(state => state.couponReducer.addCoupon)
-
   /*states */
   const [name,setName] = useState("")
   const [expire,setExpire] = useState("")
   const [discount,setDiscount] = useState(0)
   const [addLoading,setLoading] = useState(true)
   const [isPress,setIsPress] = useState(false)
+  
+  const dispatch = useDispatch()
+  const res = useSelector(state => state.couponReducer.addCoupon)
 
   /*change states functions*/
   const onChangeName =(e)=>{

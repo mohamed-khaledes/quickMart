@@ -1,8 +1,10 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { getAllBrandPageAction } from '../../Redux/actions/brandAction'
 
 const AllBrandsPageHook = () => {
+  // states
+  const [loading,setLoading]=useState(true)
   const limit=8;
  // put useDispatch in a varialbe
   // to run the redux
@@ -11,7 +13,9 @@ const AllBrandsPageHook = () => {
   // will execute when first load
   useEffect(()=>{
     const get =async()=>{
+      setLoading(true)
       await dispatch(getAllBrandPageAction("",limit))
+      setLoading(false)
     }
     get()
   },[])
@@ -19,7 +23,7 @@ const AllBrandsPageHook = () => {
   // get what we need from the data in backend (api) by useSelector
   // to get state from redux
   const brand = useSelector((state) => state.brandReducer.brands)
-  const loading = useSelector((state) => state.brandReducer.loading)
+  // const loading = useSelector((state) => state.brandReducer.loading)
   // to get page count
   let pageCount = 0;
   // to wait the data load

@@ -2,7 +2,7 @@ import React,{useRef,useEffect, useState} from 'react'
 import './NavBarLogin.css'
 import { Container, Form, Nav, Navbar } from 'react-bootstrap'
 import egyptFlag from  '../../../imgs/egyptFlag.jpg'
-import noon from '../../../imgs/noon.png'
+import logo from '../../../imgs/logo02.png'
 import NavbarSearchHook from '../../../CustomHooks/Search/NavbarSearchHook'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
@@ -56,8 +56,7 @@ const NavBarLogin = () => {
   const logOut =()=>{
     setTimeout(() => {
       setUser({})
-      localStorage.removeItem("user")
-        localStorage.removeItem("token")
+      localStorage.clear()
         window.location.href='/'
       },300);
   }
@@ -73,13 +72,13 @@ const NavBarLogin = () => {
     <div className='d-none d-md-block navBar-login'>
       <Navbar expand="lg" className='navBar'>
       <Container fluid className='flex-nowrap'>
-        <Link to={"/"}>
-        <div className='noon-logo'>
-        <img src={noon} alt='noon-logo'></img>
+        <Link to={"/"} aria-label='logo'>
+        <div className='quickmart-logo'>
+        <img loading='lazy' src={logo} alt='logo-quickmart'></img>
         </div>
         </Link>
         <Nav>
-          <Link to='/user/userPersonalAddressesPage' className='border-0'>
+          <Link to='/user/userPersonalAddressesPage' className='border-0' aria-label='to to user addresses page'>
           <div className='dilver'>
             <p  className='text-color fw-bold font-size-14 m-0'>
               <img className='egypt-flag' src={egyptFlag} alt='egypt-flag'/>
@@ -99,9 +98,9 @@ const NavBarLogin = () => {
               aria-label="Search"
             />
           </Form>
-          <div className='language'>
+          {/* <div className='language'>
             <button className='bg-transparent border-0 fw-bold text-color'>English</button>
-          </div>
+          </div> */}
           {user!==null?(
             <>
       <Dropdown>
@@ -133,11 +132,11 @@ const NavBarLogin = () => {
             null
             :
             <div className='links-parent px-2 mx-2 d-flex'>
-            <Link to="/cartPage" className='custom-nav-link'>
+            <Link to="/cartPage" className='custom-nav-link' aria-label='go to cart'>
             <span className="cart-badge">{productsNumber}</span>
             <span className='text-color font-size-14 mx-1'>Cart</span><FontAwesomeIcon icon={faCartShopping}/>
             </Link>
-            <Link to="/user/userFavoriteProductsPage" className='custom-nav-link'>
+            <Link to="/user/userFavoriteProductsPage" className='custom-nav-link' aria-label='go to wishlist'>
             <span className="cart-badge">{wishlistNum}</span>
             <span className='text-color font-size-14 mx-1'>Wishlist</span><FontAwesomeIcon icon={faHeart}/>
             </Link>

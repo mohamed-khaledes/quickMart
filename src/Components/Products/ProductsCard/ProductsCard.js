@@ -10,8 +10,8 @@ const ProductsCard = ({item,favProduct}) => {
    <div key={item._id} className='product-card p-0'>
     <Card>
       <div className='card-img-wrapper'>
-      <Link to={`/productDetailsPage/${item._id}`}>
-      <Card.Img className='card-img' variant="top" src={item.imageCover} />
+      <Link to={`/productDetailsPage/${item._id}`} aria-label='go to product details'>
+      <Card.Img loading='lazy' alt='product-img' className='card-img' variant="top" src={item.imageCover} />
       </Link>
       <span className='quantity'>{item.quantity} product left</span>
       <span className='best-seller'>Best seller</span>

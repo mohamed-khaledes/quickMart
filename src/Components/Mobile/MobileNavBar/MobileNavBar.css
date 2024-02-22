@@ -18,7 +18,7 @@
 }
 .mobile-navbar-item{
     position: relative;
-    color: black;
+    color: var(--primary-color);
     font-weight: 600;
     display: flex;
     flex-direction: column;

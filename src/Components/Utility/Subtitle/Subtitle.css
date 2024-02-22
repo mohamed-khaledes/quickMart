@@ -12,7 +12,7 @@
 }
 .btn-title button{
     width: 150px;
-    background-color:var(--black-color);
+    background-color:var(--primary-color);
     color:var(--white-color);
     border: none;
     transition: all 0.3s;
@@ -24,7 +24,8 @@
     border-bottom-right-radius: 10px;
 }
 .btn-title button:hover{
-    background:linear-gradient(to top left, var(--pink-one), var(--pink-two));
+    /* background:linear-gradient(to top left, var(--pink-one), var(--pink-two)); */
+    background:var(--color-secondary);
     border-color: var(--primary-color);
     color: var(--black-color);
 }

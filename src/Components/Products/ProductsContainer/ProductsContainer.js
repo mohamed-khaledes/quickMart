@@ -2,13 +2,11 @@ import React from 'react'
 import './ProductsContainer.css'
 import { Col, Container, Row } from 'react-bootstrap'
 import ProductsCard from '../ProductsCard/ProductsCard'
-import Subtitle from '../../Utility/Subtitle/Subtitle'
 import ProductsContainerHook from '../../../CustomHooks/Product/ProductsContainerHook'
 const ProductsContainer = ({title,btntitle,pathValue,products}) => {
   const [wishlist] = ProductsContainerHook()
   return (
     <Container className='products-container my-5'>
-      <Subtitle title={title}/>
         <Row>
           {products?
           products.map((item,index)=>

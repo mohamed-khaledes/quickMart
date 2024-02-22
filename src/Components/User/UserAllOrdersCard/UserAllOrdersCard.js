@@ -9,9 +9,8 @@ const UserAllOrdersCard = ({el}) => {
       <Row className="user-order-card">
         <Col xs="12" sm="3" >
           <img className="user-order-card-img" src={
-             baseUrl.getUri() +
-             "/products/" +
-            el.product.imageCover} alt="user-order-card-img"></img>
+             baseUrl.getUri() + "/products/" +
+            el.product.imageCover} alt="user-order-card-img" loading="lazy"></img>
         </Col>
         <Col xs="12" sm="9" className="user-order-card-description text-start">
           <div className="user-order-card-title">

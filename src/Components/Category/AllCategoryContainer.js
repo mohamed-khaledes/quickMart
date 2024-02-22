@@ -9,7 +9,7 @@ const AllCategoryContainer = () => {
   const [loading,category,pageCount,getPage] = AllCategoryPageHook(12)
   return (
     <Container className='position-relative'>
-        <Row className='all-categories-content'>
+        <Row className='all-categories-content min-vh-100'>
           {loading === false?(
             category?(
               category.map((item,index) =>{

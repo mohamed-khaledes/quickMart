@@ -10,8 +10,8 @@ import NotFoundData from '../../../Components/Utility/NotFoundData/NotFoundData'
 const HomeCategory = () => {
   const [loading,items] = HomeCategoryHook()
   return (
-    <Container  className='home-category position-relative my-3 bg-white py-2'>
-            <Subtitle title="Categories" btntitle={"more"} pathValue={'/allCategoryPage'}></Subtitle>
+    <Container  className='home-category position-relative my-3 py-2'>
+            <Subtitle title="Categories"  pathValue={'/allCategoryPage'}></Subtitle>
             <Row>
               <div className='data-content'>
               {

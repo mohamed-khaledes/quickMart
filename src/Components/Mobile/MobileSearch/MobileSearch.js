@@ -1,6 +1,6 @@
 import React ,{useRef,useEffect}from 'react'
 import './MobileSearch.css'
-import noon from '../../../imgs/noon.png'
+import logo from '../../../imgs/mobile-logo.png'
 import { FaLocationArrow,FaCaretDown } from "react-icons/fa"
 import NavbarSearchHook from '../../../CustomHooks/Search/NavbarSearchHook'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -35,7 +35,7 @@ const MobileSearch = () => {
         <div className='form-parent'>
             <Link to="/">
               <div className='mobile-logo'>
-              <img src={noon} alt="noon-logo"></img>
+              <img src={logo} loading='lazy' alt="quickmart-logo"></img>
               </div>
             </Link>
             <form>
@@ -51,7 +51,7 @@ const MobileSearch = () => {
             }
         </div>
         <div className='deliver-to-city'>
-          <Link to="/user/userPersonalAddressesPage" className='text-black'>
+          <Link to="/user/userPersonalAddressesPage">
             <span><FaLocationArrow /></span>
             <span>Deliver to {address ||"..."}</span>
             <span><FaCaretDown /></span>

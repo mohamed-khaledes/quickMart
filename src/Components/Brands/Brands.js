@@ -12,7 +12,7 @@ const Brands = () => {
   const [data,loading]  = HomeBrandHook()
   return (
     <Container className='brands my-3 p-3 position-relative'>
-        <Subtitle title={"brands"} btntitle={"more"} pathValue="/brandsPage"/>
+        <Subtitle title={"brands"}  pathValue="/brandsPage"/>
         <Row>
         {
           loading === false ?(

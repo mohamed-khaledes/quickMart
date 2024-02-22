@@ -1,5 +1,4 @@
 import {useState,useEffect}from 'react'
-//actions
 import { useSelector,useDispatch } from 'react-redux'
 import { getAllCategoryAction } from '../../../Redux/actions/categoryAction'
 import { getAllBrandsAction } from '../../../Redux/actions/brandAction'
@@ -8,11 +7,11 @@ import {createProduct} from '../../../Redux/actions/productAction'
 import Notify from '../../UseNotification'
 const AddProductHook = () => {
   const dispatch = useDispatch()
+  const get =async()=>{
+    await dispatch(getAllCategoryAction())
+    await dispatch(getAllBrandsAction())
+  }
   useEffect(()=>{
-    const get =async()=>{
-      await dispatch(getAllCategoryAction())
-      await dispatch(getAllBrandsAction())
-    }
     get()
   },[])
   // categories data from redux
@@ -84,9 +83,7 @@ const AddProductHook = () => {
               setOptions(oneCategorySub.data)
             }
           }
-        }catch(e){
-          
-        }
+        }catch(e){}
       },[catId])
       //==============================================================
       //code for show and hide the color picker

@@ -116,7 +116,7 @@
 }
 .badg{
     background-color: var(--primary-color);
-    color: #000000ab;
+    color:white;
     font-size: 12px;
     font-weight: 600;
     padding: 0px 5px;

@@ -18,7 +18,7 @@
 }
 .form-parent .mobile-logo{margin: 0 5px;}
 .form-parent .mobile-logo img{
-    width:90px;
+    width:35px;
 }
 .form-parent form{
     width:70%;
@@ -43,6 +43,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.deliver-to-city a{color: var(--primary-color);}
 .deliver-to-city span{
     font-weight: bold;
     margin-right: 10px;

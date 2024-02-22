@@ -1,5 +1,5 @@
 .product-description{
-    text-align: left;
+    text-align: start;
 }
 /*product rate*/
 .product-rate{
@@ -65,9 +65,6 @@
 }
 .product-color p span{
     font-weight: bold;
-}
-.product-color .colors{
-    display: flex;
 }
 .product-color .colors div{
     width: 50px;

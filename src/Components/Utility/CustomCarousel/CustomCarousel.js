@@ -129,7 +129,7 @@ const CustomCarousel = (props) => {
         onTouchMove={handleTouchMove}
         >
         {currentIndex > 0 && 
-        <button onClick={prev} className="left-arrow">
+        <button aria-label='left arrow to slide' onClick={prev} className="left-arrow">
         <FontAwesomeIcon icon={faArrowLeft}/>
         </button>
         }
@@ -141,7 +141,7 @@ const CustomCarousel = (props) => {
         </div>
             {
             currentIndex < (length - responsive_show) &&
-            <button onClick={next} className="right-arrow">
+            <button aria-label='right arrow to slide' onClick={next} className="right-arrow">
            <FontAwesomeIcon icon={faArrowRight}/>
             </button>
             }

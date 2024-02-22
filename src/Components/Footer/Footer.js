@@ -4,7 +4,7 @@ import "./Footer.css";
 import paypal from "../../imgs/paypal.png";
 import visa from "../../imgs/visa.png";
 import credit from "../../imgs/credit-card.png";
-import noon from "../../imgs/noon.png";
+import logo from "../../imgs/logo02.png";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="footer-about">
               <div className="footer-logo mb-4">
                 <Link to="/">
-                  <img src={noon} alt=""></img>
+                  <img src={logo} loading="lazy" alt="quickmart-logo"></img>
                 </Link>
               </div>
               <p>

@@ -10,7 +10,7 @@ const ProductDetails = () => {
         <ProductGallary/>
         </Col>
         <Col lg="8">
-            <ProductDescriptoin/>
+          <ProductDescriptoin/>
         </Col>
     </Row>
   )

@@ -15,8 +15,8 @@
     font-family: 'Almarai', sans-serif;
     font-size: 15px;
 }
-.noon-logo img{
-    width: 100px;
+.quickmart-logo img{
+    width: 60px;
 }
 .egypt-flag{
     max-width:40px;
@@ -105,7 +105,7 @@
     position: relative;
 }
 .custom-nav-link svg{
-    color:#808080ba;
+    color:white;
     font-size: 20px;
 }
 .custom-nav-link:hover{
@@ -118,9 +118,15 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    color: white;
-    background-color: var(--blue-color);
+    color: var(--primary-color);
+    background-color: var(--color-secondary);
     top: -15px;
     right: -10px;
 }
 /*End cart link and wishlist link*/
+/*@media*/
+@media (max-width:767px) {
+    .custom-nav-link svg{
+        color: var(--primary-color);
+    }
+}

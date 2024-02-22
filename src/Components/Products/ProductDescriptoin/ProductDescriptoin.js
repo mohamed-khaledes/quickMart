@@ -14,7 +14,7 @@ const ProductDescriptoin = () => {
     const [onClickColor,onAddProductToCart,colorIndex,cartAddingLoading,isPress] = AddProductToCartHook(id,item)
     
   return (
-    <div className='product-description position-relative'>
+    <div className='product-description position-relative"'>
         {
             loading===false&&catLoading===false&&brLoading===false?
             item? 
@@ -47,7 +47,7 @@ const ProductDescriptoin = () => {
             </div>
             <div className='product-color'>
                 <p>Brand: <span>{brand.name}</span></p>
-                <div className='colors'>
+                <div className='colors d-flex'>
                     {
                         item.availableColors?
                         item.availableColors.map((color,index)=>
@@ -58,7 +58,7 @@ const ProductDescriptoin = () => {
                 </div>
             </div>
             <div className='add-to-cart-btn' onClick={onAddProductToCart}>
-                    <ButtonComponent btnValue={"Add to cart"}/>
+                <ButtonComponent btnValue={"Add to cart"}/>
             </div>
             </Row>
             :<NotFoundData />

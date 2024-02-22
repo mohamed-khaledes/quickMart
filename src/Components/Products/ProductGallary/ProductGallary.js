@@ -14,8 +14,8 @@ const ProductGallary = () => {
     <div className='product-gallary'>
     <div className="slider">
         {
-          item?
           loading===false?
+          item?
           <>
           <div className="slides">
         {images.map((e, i) => (
@@ -38,8 +38,8 @@ const ProductGallary = () => {
         </div>
           </div>
           </>
-          :<SpinnerComponent/>
           :<NotFoundData/>
+          :<SpinnerComponent/>
         }
     </div>
     </div>

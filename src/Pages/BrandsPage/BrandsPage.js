@@ -3,7 +3,6 @@ import './BrandsPage.css'
 import { Col, Container, Row } from 'react-bootstrap'
 import BrandCard from '../../Components/Brands/BrandCard/BrandCard'
 import Pagenation from '../../Components/Utility/Pagenation/Pagenation'
-import Subtitle from '../../Components/Utility/Subtitle/Subtitle'
 import SpinnerComponent from '../../Components/Utility/SpinnerComponent/SpinnerComponent'
 import AllBrandsPageHook from '../../CustomHooks/Brand/AllBrandsPageHook'
 import NotFoundData from '../../Components/Utility/NotFoundData/NotFoundData'
@@ -11,7 +10,6 @@ const BrandsPage = () => {
   const [loading,brand,pageCount,getPage] = AllBrandsPageHook()
   return (
     <div className='page brands-page container'>
-        <Subtitle title="all brands"/>
         <Container>
         <Row className='all-brands-content'>
           {loading === false?(
