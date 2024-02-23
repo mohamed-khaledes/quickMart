@@ -38,7 +38,7 @@
 }
 .footer .footer__widget ul li{
     margin-bottom: 10px;
-    font-size:15px;
+    font-size:17px;
 }
 .footer .footer__newslatter input{
     background-color: transparent;
@@ -52,6 +52,10 @@
 .footer .footer__newslatter button{
     background-color: transparent;
     border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .footer .footer__newslatter button i{
     color: gray;

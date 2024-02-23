@@ -71,6 +71,9 @@
     font-size: 15px !important;
     text-transform: capitalize;
     font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .pricing .pricing-child {
     font-size: 12px;
@@ -82,7 +85,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 .pricing .pricing-child .price,
 .pricing .pricing-child .price-after-discount{

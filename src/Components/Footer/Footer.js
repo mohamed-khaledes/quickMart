@@ -84,7 +84,7 @@ const Footer = () => {
                   Be the first to know about new arrivals, look books, sales
                   &amp; promos!
                 </p>
-                <form action="#">
+                <form className="position-relative" action="#">
                   <input type="text" placeholder="Your email"></input>
                   <button type="submit">
                     <span>
