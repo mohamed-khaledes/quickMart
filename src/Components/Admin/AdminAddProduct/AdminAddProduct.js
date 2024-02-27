@@ -77,13 +77,11 @@ const AdminAddProduct = () => {
           <option value={"0"}>choose category</option>
           {
             category?
-            category.data?(
-              category.data.map((item)=>{
+              category?.data?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>
                 )
               })
-            ):null
             :null
           }
         </select>
@@ -104,13 +102,11 @@ const AdminAddProduct = () => {
           <option value={"0"}>select brand</option>
           {
             brands?
-            brands.data?(
-              brands.data.map((item)=>{
+              brands?.data?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>
                 )
               })
-            ):null
             :null
           }
         </select>

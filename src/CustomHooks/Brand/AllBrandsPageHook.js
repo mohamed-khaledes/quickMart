@@ -11,18 +11,24 @@ const AllBrandsPageHook = () => {
   const dispatch = useDispatch()
   // run the dispatch function by useEffect hook
   // will execute when first load
+  const get =async()=>{
+    setLoading(true)
+    await dispatch(getAllBrandPageAction("",limit))
+    setLoading(false)
+  }
   useEffect(()=>{
-    const get =async()=>{
-      setLoading(true)
-      await dispatch(getAllBrandPageAction("",limit))
-      setLoading(false)
-    }
     get()
   },[])
+  useEffect(()=>{
+    if(deleteBrandRes){
+      get()
+    }
+  },[deleteBrandRes])
 
   // get what we need from the data in backend (api) by useSelector
   // to get state from redux
   const brand = useSelector((state) => state.brandReducer.brands)
+  const deleteBrandRes = useSelector((state) => state.brandReducer.deleteBrand)
   // const loading = useSelector((state) => state.brandReducer.loading)
   // to get page count
   let pageCount = 0;

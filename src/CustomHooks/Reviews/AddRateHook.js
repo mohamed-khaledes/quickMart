@@ -45,9 +45,6 @@ const AddRateHook = () => {
       if(res.status && res.status === 201 || res.status === 200){
        // succes
        Notify("review added","success")
-       setTimeout(() => {
-        window.location.reload()
-       }, 1000);
       }else if(res.status ===403){
        //Bad request
        Notify(res.data.message,"warn")

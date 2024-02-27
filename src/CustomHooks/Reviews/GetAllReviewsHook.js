@@ -6,16 +6,23 @@ const GetAllReviewsHook = (id) => {
     const [loading ,setLoading] =useState(true)
     const dispatch = useDispatch()
     const allReviews = useSelector((state)=>state.reviewsReducer.reviews)
+    const addReviewRes = useSelector(state => state.reviewsReducer.addReview)
+    const deleteReviewRes = useSelector(state => state.reviewsReducer.deleteReview)
     const limit =5;
     const page =1;
+    const getData =async()=>{
+        setLoading(true)
+        await dispatch(getAllReviews(id,page,limit))
+        setLoading(false)
+    }
     useEffect(()=>{
-        const getData =async()=>{
-            setLoading(true)
-            await dispatch(getAllReviews(id,page,limit))
-            setLoading(false)
-        }
         getData()
     },[])
+    useEffect(()=>{
+        if(addReviewRes || deleteReviewRes){
+            getData()
+        }
+    },[addReviewRes,deleteReviewRes])
     
     let reviews =[];
     if(allReviews){

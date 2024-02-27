@@ -12,7 +12,7 @@ import NotFoundData from '../../Components/Utility/NotFoundData/NotFoundData'
 const CartPage = () => {
   const[productsNumber,totalPrice,items,totalAfterDiscount,coupon,loading]= GetAllCartHook()
       return (
-        <div className='page cart-page'>
+        <div className='page cart-page position-relative'>
           <Container>
             <h2 className='cart-page-title'>
             Cart {productsNumber===1?<span> (one item)</span>:<span> ({productsNumber} items)</span>}
@@ -25,7 +25,7 @@ const CartPage = () => {
                 <Col md="8">
                   {
                     items.map((item,index)=>{return(
-                      <CartItem key={index} item={item}/>
+                      <CartItem item={item} key={index}/>
                     )})
                   }
                 </Col>

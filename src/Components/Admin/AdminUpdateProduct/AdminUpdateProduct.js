@@ -74,8 +74,8 @@ const AdminUpdateProduct = ({id}) => {
         >
           <option value={"0"}>choose category</option>
           {
-            category.data?(
-              category.data.map((item)=>{
+            category?.data?(
+              category?.data?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>
                 )
@@ -100,7 +100,7 @@ const AdminUpdateProduct = ({id}) => {
           <option value={"0"}>select brand</option>
           {
             brands.data?(
-              brands.data.map((item)=>{
+              brands?.data?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>
                 )

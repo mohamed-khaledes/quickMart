@@ -25,7 +25,7 @@ const ProductDetailsPage = () => {
     ratingQty=""
   }
   return (
-    <div className='page product-details-page'>
+    <div className='page product-details-page position-relative'>
         <Container>
             <ProductDetails/>
             <RateContainer ratingAvg={ratingAvg} ratingQty={ratingQty}/>

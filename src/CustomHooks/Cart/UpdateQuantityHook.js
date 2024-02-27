@@ -10,9 +10,7 @@ const UpdateQuantityHook = (item) => {
    const [loading,setLoading] = useState(true)
 useEffect(()=>{
     if(item){
-        if(item.item){
-            setCount(item.item.count)
-        }
+            setCount(item.count)
     }else{
         setCount(0)
     }
@@ -42,9 +40,6 @@ useEffect(()=>{
             if(res){
                 if(res.status===200){
                     Notify("count updated","success")
-                    setTimeout(() => {
-                        window.location.reload(false)
-                    },1000);
                 }else if(res.status === 400){
                     Notify(res.data.message,"warn")
                 }else{

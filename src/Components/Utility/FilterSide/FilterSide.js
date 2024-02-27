@@ -51,7 +51,7 @@ const FilterSide = () => {
                   </li>
                 ))
               ) : (
-                <p>not found categories</p>
+                <p>Not found categories</p>
               )
             ) : (
               <SpinnerComponent />
@@ -84,7 +84,7 @@ const FilterSide = () => {
                   </li>
                 ))
               ) : (
-                <p>not found brands</p>
+                <p>Not found brands</p>
               )
             ) : (
               <SpinnerComponent />
@@ -94,14 +94,14 @@ const FilterSide = () => {
         <div className="price-filter">
           <h2>Price</h2>
           <div>
-            <label>from</label>
+            <label>From</label>
             <input
               value={localFrom}
               type={"number"}
               step="100"
               onChange={priceFrom}
             ></input>
-            <label>to</label>
+            <label>To</label>
             <input
               value={localTo}
               type={"number"}

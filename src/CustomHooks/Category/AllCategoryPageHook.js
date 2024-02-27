@@ -11,17 +11,23 @@ const AllCategoryPageHook = (limit) => {
   // get what we need from the data in backend (api) by useSelector
   // to get state from redux
   const categoryRes = useSelector((state) => state.categoryReducer.allCategories)
+  const deleteCategoryRes = useSelector(state => state.categoryReducer.deleteCategory)
   // const loading = useSelector((state) => state.categoryReducer.loading)
   // run the dispatch function by useEffect hook
   // will execute when first load
+  const get =async()=>{
+    setLoading(true)
+    await dispatch(getAllCategoryAction(limit))
+    setLoading(false)
+  }
   useEffect(()=>{
-    const get =async()=>{
-      setLoading(true)
-      await dispatch(getAllCategoryAction(limit))
-      setLoading(false)
-    }
     get()
   },[])
+  useEffect(()=>{
+    if(deleteCategoryRes){
+      get()
+    }
+  },[deleteCategoryRes])
 
   // to get page count
   let pageCount = 0;

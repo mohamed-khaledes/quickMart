@@ -3,6 +3,10 @@ import { useDispatch,useSelector } from 'react-redux'
 import Notify from '../../CustomHooks/UseNotification'
 import { addProductToCart } from '../../Redux/actions/cartAction'
 const AddProductToCartHook = (prodId,item) => {
+     const [cartAddingLoading,setLoading] = useState(true)
+     const [isPress,setIsPress] = useState(false)
+     const [colorText,setColorText] = useState("")
+     const [colorIndex,setColorIndex] = useState("")
     const dispatch = useDispatch()
     const res = useSelector(state => state.cartReducer.addProductToCart)
     let user=null
@@ -11,17 +15,11 @@ const AddProductToCartHook = (prodId,item) => {
     }else{
         user=null
     }
-    /*states */
-    const [cartAddingLoading,setLoading] = useState(true)
-    const [isPress,setIsPress] = useState(false)
-    const [colorText,setColorText] = useState("")
-    const [colorIndex,setColorIndex] = useState("")
 
     const onClickColor =(index,color)=>{
         setColorIndex(index)
         setColorText(color)
     }
-  
     /*on add product to cart fn */
     const onAddProductToCart = async()=>{
         if(user.role!=="admin"){
@@ -49,7 +47,6 @@ const AddProductToCartHook = (prodId,item) => {
         }
 
 }
-  
       useEffect(()=>{
           if(cartAddingLoading === false){
               if(res){
@@ -57,9 +54,6 @@ const AddProductToCartHook = (prodId,item) => {
                     if(res.data){
                     Notify(res.data.message,"success")
                     }
-                    setTimeout(() => {
-                        window.location.reload(false)
-                    },1000);
                   }else if(res.status === 400){
                       Notify(res.data.message,"warn")
                   }else{

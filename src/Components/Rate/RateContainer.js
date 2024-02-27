@@ -8,9 +8,8 @@ import UsersRateItem from './UsersRateItem'
 import GetAllReviewsHook from '../../CustomHooks/Reviews/GetAllReviewsHook'
 import { useParams } from 'react-router-dom'
 const RateContainer = ({ratingAvg,ratingQty}) => {
-    const id = useParams()
-    let ID = id.id
-    const [reviews,loading,onPress] = GetAllReviewsHook(ID)
+    const {id} = useParams()
+    const [reviews,loading,onPress] = GetAllReviewsHook(id)
   return (
     <Container className='rate-container'>
         <Row>

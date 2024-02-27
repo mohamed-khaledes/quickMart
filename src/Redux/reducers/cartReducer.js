@@ -7,7 +7,8 @@ const initialState = {
     updateProductInCart:[],
     removeAllCart:[],
     applyCoupon:[],
-    loading:true
+    loading:true,
+    addLoading:true,
 }
 const cartReducer =(state=initialState,action)=>{
     switch(action.type){
@@ -21,7 +22,7 @@ const cartReducer =(state=initialState,action)=>{
             return{
                 ...state,
                 addProductToCart:action.payload,
-                loading:false
+                addLoading:false
             }
         case UPDATE_PRODUCT_IN_CART:
             return{

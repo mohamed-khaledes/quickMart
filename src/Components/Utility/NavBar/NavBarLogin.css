@@ -59,7 +59,7 @@
 }
 /*start style of dropdown*/
 .navBar .dropdown{
-    width:fit-content;
+    width:230px;
 }
 .navBar .dropdown .dropdown-toggle{
     position: relative;

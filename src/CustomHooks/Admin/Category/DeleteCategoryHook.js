@@ -10,7 +10,6 @@ const DeleteCategoryHook = (id) => {
   const handleDelete = async () => {
     await dispatch(deleteCategory(id));
     setShow(false);
-    window.location.reload()
   };
 
   return [show,handleClose,handleShow,handleDelete]

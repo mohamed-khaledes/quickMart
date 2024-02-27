@@ -35,9 +35,6 @@ const ApplyCouponHook = (coupon) => {
             if(res){
                 if(res.status===200){
                     Notify("coupon added","success")
-                    setTimeout(() => {
-                      window.location.reload(false)
-                    }, 1000);
                 }else if(res.status === 400){
                     Notify(res.data.message,"warn")
                 }else{

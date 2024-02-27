@@ -6,6 +6,18 @@ import {getOneCategorySub} from '../../../Redux/actions/subCategoryAction'
 import {createProduct} from '../../../Redux/actions/productAction'
 import Notify from '../../UseNotification'
 const AddProductHook = () => {
+  //states values
+  const [options,setOptions] = useState([])
+  const [prodName,setProdName] = useState("")
+  const [prodDes,setProdDes] = useState("")
+  const [price,setPrice] = useState("")
+  const [priceAfterDiscount,setPriceAfterDiscount] = useState("")
+  const [qty,setQty] = useState("")
+  const [catId,setCatId] = useState("0")
+  const [brandId,setBrandId] = useState("0")
+  // const [subCatId,setSubCatId] = useState([])
+  const [selectedSubId,setSelectedSubId] = useState([])
+  const [loading,setLoading] = useState(true)
   const dispatch = useDispatch()
   const get =async()=>{
     await dispatch(getAllCategoryAction())
@@ -26,18 +38,6 @@ const AddProductHook = () => {
   // products images values
   const [images,setImages] = useState([]);
   //=================================================
-  //states values
-  const [options,setOptions] = useState([])
-  const [prodName,setProdName] = useState("")
-  const [prodDes,setProdDes] = useState("")
-  const [price,setPrice] = useState("")
-  const [priceAfterDiscount,setPriceAfterDiscount] = useState("")
-  const [qty,setQty] = useState("")
-  const [catId,setCatId] = useState("0")
-  const [brandId,setBrandId] = useState("0")
-  // const [subCatId,setSubCatId] = useState([])
-  const [selectedSubId,setSelectedSubId] = useState([])
-  const [loading,setLoading] = useState(true)
   //functions for onchange the states
   const onChangeProdName =(e)=>{
     setProdName(e.target.value)

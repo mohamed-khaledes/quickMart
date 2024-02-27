@@ -3,21 +3,27 @@ import { useDispatch,useSelector} from 'react-redux'
 import { getAllWishlist } from '../../Redux/actions/wishlistAction'
 
 const WishlistHook = () => {
-    const dispatch = useDispatch()
-    const res =useSelector(state=>state.wishlistReducer.wishlist)
-    const [loading,setLoading] = useState(true)
+  const [loading,setLoading] = useState(true)
     const [wishlist,setWishlist] = useState([])
     const [wishlistItems,setWishlistItems] = useState([])
     const [wishlistNum,setWishlistNum] = useState(0)
-  
+    const dispatch = useDispatch()
+    const res =useSelector(state=>state.wishlistReducer.wishlist)
+    const resAdd = useSelector(state =>state.wishlistReducer.addToWishlist)
+    const resDelete = useSelector(state =>state.wishlistReducer.deleteFromWishlist)
+    const get =async()=>{
+      setLoading(true)
+      await dispatch(getAllWishlist())
+      setLoading(false)
+    }
     useEffect(()=>{
-      const get =async()=>{
-        setLoading(true)
-        await dispatch(getAllWishlist())
-        setLoading(false)
-      }
       get()
     },[])
+    useEffect(()=>{
+      if(resAdd || resDelete){
+        get()
+      }
+    },[resAdd,resDelete])
   
     useEffect(()=>{
       if(loading===false){

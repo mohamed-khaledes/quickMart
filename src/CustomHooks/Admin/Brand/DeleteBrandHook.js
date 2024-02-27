@@ -10,7 +10,6 @@ const DeleteBrandHook = (id) => {
   const handleDelete = async () => {
     await dispatch(deleteBrandAction(id));
     setShow(false);
-    window.location.reload()
   };
 
   return [show,handleClose,handleShow,handleDelete]

@@ -15,11 +15,19 @@ import { Link,useNavigate } from 'react-router-dom'
 import GetAllUserAddressesHook from '../../../CustomHooks/User/Addresses/GetAllUserAddressesHook'
 import WishlistHook from '../../../CustomHooks/Wishlist/WishlistHook'
 const NavBarLogin = () => {
+  //states
+  const [seensignup, setSeensignup] = useState(false);
+  const [seenlogin, setSeenlogin] = useState(false);
+  const [user,setUser] =useState({})
+  const focusInput = useRef(null)
   const [,onChangeSearchWord] = NavbarSearchHook()
   // get all cart hook
   const [productsNumber] = GetAllCartHook()
   // get all user addresses hook
   const [addresses] = GetAllUserAddressesHook();
+  // wishlist hook 
+  const [,,,wishlistNum] = WishlistHook()
+  // get user address
   let address;
   try{
     if(addresses){
@@ -30,13 +38,6 @@ const NavBarLogin = () => {
       }
     }
   }catch(e){}
-  // wishlist hook 
-  const [,,,wishlistNum] = WishlistHook()
-  //states
-  const [seensignup, setSeensignup] = useState(false);
-  const [seenlogin, setSeenlogin] = useState(false);
-  const [user,setUser] =useState({})
-  const focusInput = useRef(null)
   const Navigate = useNavigate()
   //======================================================
   // word of search

@@ -4,6 +4,9 @@ import { allCoupons } from '../../../Redux/actions/couponAction'
 const GetAllCouponsHook = () => {
   const dispatch = useDispatch()
   const res = useSelector(state => state.couponReducer.allCoupons)
+  const addCouponRes = useSelector(state => state.couponReducer.addCoupon)
+  const updateCouponRes = useSelector(state => state.couponReducer.updateCoupon)
+  const deleteCouponRes = useSelector((state) => state.couponReducer.deleteCoupon);
   const loading = useSelector(state => state.couponReducer.loading)
 
   const get = async()=>{
@@ -12,6 +15,11 @@ const GetAllCouponsHook = () => {
   useEffect(()=>{
         get()
   },[])
+  useEffect(()=>{
+    if(addCouponRes || updateCouponRes || deleteCouponRes){
+        get()
+    }
+  },[addCouponRes,updateCouponRes,deleteCouponRes])
 
   /*coupons */
   let coupons =[]

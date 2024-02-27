@@ -1,5 +1,4 @@
 import baseUrl from "../Api/baseURL";
-
 // this is custom hook called useGetData like useEffect and other hooks
 export const GetDataHook = async(url,params)=>{
     // url for our url from api

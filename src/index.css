@@ -41,6 +41,7 @@ del{
 .page{
   min-height:100vh !important;
   padding: 50px 0px;
+  position: relative;
 }
 ul{
   list-style: none;
@@ -149,7 +150,18 @@ outline: none;
 .btn-box{width: fit-content;}
 /*end custom classes*/
 
-
+/*Start scroll sidebar*/
+::-webkit-scrollbar {
+  width:8px;
+}
+  ::-webkit-scrollbar-track {
+  background:var(--secondary-color); 
+}
+  ::-webkit-scrollbar-thumb {
+  background:var(--primary-color); 
+    border-radius:6px;
+}
+/*End scroll sidebar*/
 /*media query*/
 @media (max-width:767px) {
   .page{

@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import Notify from "../../UseNotification";
 import { deleteCoupon } from "../../../Redux/actions/couponAction";
 const DeleteCouponHook = () => {
-  const dispatch = useDispatch();
-  const res = useSelector((state) => state.couponReducer.deleteCoupon);
   /*states */
   const [loading, setLoading] = useState(true);
   const [isPress, setIsPress] = useState(false);
+  const dispatch = useDispatch();
+  const res = useSelector((state) => state.couponReducer.deleteCoupon);
 
   /*on add coupon fn */
   const onDeleteCoupon = async (id) => {
@@ -21,12 +21,8 @@ const DeleteCouponHook = () => {
   useEffect(() => {
     if (loading === false) {
       if (res) {
-        console.log(res)
         if (res.status === 204 || res.status === 200) {
           Notify("Deleted", "success");
-          setTimeout(() => {
-            window.location.reload()
-          },1000);
         } else if (res.status === 400) {
           Notify(res.data.message, "warn");
         } else {

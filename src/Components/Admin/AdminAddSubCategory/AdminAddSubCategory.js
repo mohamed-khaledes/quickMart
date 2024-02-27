@@ -21,7 +21,7 @@ const AdminAddSubCategory = () => {
             <option value={"0"}>Choose Category</option>
             {
               categoryLoading === false ?(
-                category.data.map((item)=>{
+                category?.data?.map((item)=>{
                   return(
                     <option key={item._id}  value={item._id}>{item.name}</option>
                   )

@@ -5,7 +5,7 @@ import UserSidebar from '../../../Components/User/UserSidebar/UserSidebar'
 import UserAcount from '../../../Components/User/UserAcount/UserAcount'
 const UserAcountPage = () => {
   return (
-    <Container className='user-acount-page page'>
+    <Container className='user-acount-page page position-relative'>
     <Row className='user-page-row'>
         <Col xs="12" md="3">
             <UserSidebar Acount={"active-user-page"}/>

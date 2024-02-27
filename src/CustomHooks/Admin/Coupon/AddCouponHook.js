@@ -51,9 +51,6 @@ const AddCouponHook = () => {
                     setName("")
                     setDiscount(0)
                     setExpire("")
-                    setTimeout(() => {
-                      window.location.reload()
-                    }, 1000);
                 }else if(res.status === 400){
                     Notify(res.data.message,"warn")
                 }else{
