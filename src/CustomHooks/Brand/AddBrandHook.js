@@ -41,7 +41,7 @@ const AddBrandHook = () => {
         setIspress(true)
         await dispatch(createBrandAction(formData))
         setLoding(false)
-        // toast.success("Data added")
+        setIspress(false)
       }
     }
     

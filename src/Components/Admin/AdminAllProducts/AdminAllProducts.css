@@ -1,3 +1,6 @@
 .admin-allproducts{
     padding: 40px 0px;
 }
+.admin-allproducts .row{
+    min-height: 950px;
+}

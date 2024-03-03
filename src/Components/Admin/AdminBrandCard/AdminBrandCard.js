@@ -22,12 +22,12 @@ const AdminBrandCard = ({id,img,title}) => {
         <Modal.Header closeButton>
           <Modal.Title>Delete brand</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo,are you sure to delete this brand</Modal.Body>
+        <Modal.Body>Woohoo,Are you sure to delete this brand</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             cancle
           </Button>
-          <Button variant="primary" onClick={handleDelete}>
+          <Button variant="primary" onClick={(e)=>handleDelete(e)}>
             delete
           </Button>
         </Modal.Footer>

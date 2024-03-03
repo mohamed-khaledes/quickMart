@@ -17,7 +17,6 @@ const AdminProduct = ({item}) => {
   const handleDelete = async()=>{
     await dispatch(deleteProduct(item._id))
     setShow(false)
-    window.location.reload()
   }
   return (
     <Col className='admin-product my-3 p-0' id={item._id} xs="6" sm="6" lg="4">

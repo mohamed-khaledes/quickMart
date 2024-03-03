@@ -15,9 +15,9 @@ import {GET_ALL_CATEGORY,GET_ERROR,CREATE_CATEGORY,GET_SPECIFIC_CATEGORY,DELETE_
 const initialState = {
     allCategories:[],
     createCategory:[],
-    loading:true,
     specificCategory:[],
     deleteCategory:[],
+    loading:true,
     SCLoading:true
 }
 

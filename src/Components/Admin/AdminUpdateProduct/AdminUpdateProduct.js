@@ -50,21 +50,21 @@ const AdminUpdateProduct = ({id}) => {
         value={priceBefore}
         onChange={(e)=>setPriceBefore(e.target.value)}
         className='custom-input' 
-        placeholder='price before discount'
+        placeholder='price'
         type='number'
         />
         <input 
         value={priceAfter}
         onChange={(e)=>setPriceAfter(e.target.value)}
         className='custom-input'
-        placeholder='product price'
+        placeholder='price after discount'
         type='number'
         />
         <input
         value={qty}
         onChange={(e)=>setQty(e.target.value)} 
         className='custom-input' 
-        placeholder='product Quantity'
+        placeholder='Available Quantity'
         />
         <select
         value={catId}
@@ -72,9 +72,9 @@ const AdminUpdateProduct = ({id}) => {
         className='custom-input' 
         name='main-category'
         >
-          <option value={"0"}>choose category</option>
+          <option value={"0"}>select category</option>
           {
-            category?.data?(
+            category?(
               category?.data?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>
@@ -99,7 +99,7 @@ const AdminUpdateProduct = ({id}) => {
       name='brands'>
           <option value={"0"}>select brand</option>
           {
-            brands.data?(
+            brands?(
               brands?.data?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>

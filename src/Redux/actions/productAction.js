@@ -28,7 +28,7 @@ export const createProduct = (formData) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: GET_ERROR,
-      payload: "error" + e,
+      payload:e.response
     });
   }
 };
@@ -139,7 +139,7 @@ export const getAllProductsPage = (limit, page) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: GET_ERROR,
-      payload: "Error" + e,
+      payload: e.response
     });
   } finally {
   }
@@ -156,7 +156,7 @@ export const getAllProductsSearch = (queryString) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: GET_ERROR,
-      payload: "error" + e,
+      payload: e.response
     });
   }
 };
@@ -172,7 +172,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: GET_ERROR,
-      payload: "error" + e,
+      payload:e.response
     });
   }
 };
@@ -187,7 +187,7 @@ export const getSimilarProducts = (id) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: GET_ERROR,
-      payload: "error" + e,
+      payload:e.response
     });
   }
 };
@@ -202,14 +202,13 @@ export const deleteProduct = (id) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: GET_ERROR,
-      payload: "error" + e,
+      payload: e.response
     });
   }
 };
 export const updateProduct = (id,formData) => async (dispatch) => {
   try {
     const response = await UpdateDataHookWithImage(`/api/v1/products/${id}`,formData);
-    console.log(response)
     dispatch({
       type: UPDATE_PRODUCT,
       payload: response,
@@ -218,7 +217,7 @@ export const updateProduct = (id,formData) => async (dispatch) => {
   } catch (e) {
     dispatch({
       type: GET_ERROR,
-      payload: "error" + e,
+      payload: e.response
     });
   }
 };

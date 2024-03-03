@@ -14,7 +14,7 @@ export const subCategoryAction = (data)=>async(dispatch)=>{
     catch(e){
         dispatch({
             type:GET_ERROR,
-            payload:"error"+e
+            payload:e.response
         })
     }
 }
@@ -32,7 +32,7 @@ export const getOneCategorySub = (id)=> async(dispatch)=>{
     catch(e){
         dispatch({
             type:GET_ERROR,
-            payload:"Error"+e,
+            payload:e.response
         })
     }
 }

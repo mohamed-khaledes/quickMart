@@ -1,6 +1,7 @@
 import React from 'react'
 import './AdminAddProduct.css'
 import ButtonComponent from '../../Utility/ButtonComponent/ButtonComponent'
+import SpinnerComponent from '../../Utility/SpinnerComponent/SpinnerComponent'
 import Multiselect from 'multiselect-react-dropdown';
 import MultiImageInput from 'react-multiple-image-input';
 // react color
@@ -10,25 +11,19 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 //product hook
 import AddProductHook from '../../../CustomHooks/Admin/Products/AddProductHook';
 const AdminAddProduct = () => {
-  const  [images,setImages,
-    prodDes,onChangeProdDes,
-    prodName,onChangeProdName,
-    price,onChangePrice,
-    priceAfterDiscount,onChangePriceAfter,
-    qty,onChangeQty,handleSubmit,
-  onSelectCategory,category,
-  onSelectBrand,brands,brandId,,
-  colors,removeColor,
-  showColor,onChangeColor,handleChangeComplete,
-  options,onSelect,onRemove]
+  const [
+    images,setImages,prodDes,onChangeProdDes,prodName,onChangeProdName,price,onChangePrice,
+    priceAfterDiscount,onChangePriceAfter,qty,onChangeQty,handleSubmit,onSelectCategory,categories,
+    onSelectBrand,brands,brandId,catId,colors,removeColor,showColor,
+    onChangeColor,handleChangeComplete,options,onSelect,onRemove,loading,isPress
+  ]
   =AddProductHook()
-  
   return (
-    <div className='admin-add-product'>
+    <div className='admin-add-product position-relative'>
       <h4 className='custom-title'>Add product</h4>
  <MultiImageInput
       images={images}
-      // setImages={setImages}
+      setImages={setImages}
       theme={"light"}
       max={5}
       allowCrop={false}
@@ -69,15 +64,15 @@ const AdminAddProduct = () => {
         placeholder='product Quantity'
         />
         <select
-        // value={catId}
+        value={catId}
         onChange={onSelectCategory} 
         className='custom-input' 
         name='main-category'
         >
-          <option value={"0"}>choose category</option>
+          <option value={"0"}>select category</option>
           {
-            category?
-              category?.data?.map((item)=>{
+            categories?
+            categories?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>
                 )
@@ -102,7 +97,7 @@ const AdminAddProduct = () => {
           <option value={"0"}>select brand</option>
           {
             brands?
-              brands?.data?.map((item)=>{
+              brands?.map((item)=>{
                 return(
                   <option key={item._id} value={item._id}>{item.name}</option>
                 )
@@ -134,6 +129,7 @@ const AdminAddProduct = () => {
         <div className='btn-content' onClick={(e)=>handleSubmit(e)}>
           <ButtonComponent btnValue={'save'}/>
         </div>
+        {loading===true && isPress=== true? <SpinnerComponent />:null}
     </div>
   )
 }

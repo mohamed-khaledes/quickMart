@@ -14,9 +14,9 @@ const UpdateProductHook = (id) => {
       const [options,setOptions] = useState([])
       const [prodName,setProdName] = useState("")
       const [prodDes,setProdDes] = useState("")
-      const [priceBefore,setPriceBefore] = useState("price before discount")
+      const [priceBefore,setPriceBefore] = useState("price")
       const [priceAfter,setPriceAfter] = useState("price after discount")
-      const [qty,setQty] = useState("available quantity")
+      const [qty,setQty] = useState("Available quantity")
       const [catId,setCatId] = useState("0")
       const [brandId,setBrandId] = useState("0")
       const [subCatId,setSubCatId] = useState([])
@@ -56,15 +56,15 @@ const UpdateProductHook = (id) => {
       // set values of product when the page load
       useEffect(()=>{
         try{
-            if(item.data){
-                setImages(item.data.images)
-                setProdName(item.data.title)
-                setProdDes(item.data.description)
-                setPriceBefore(item.data.price)
-                setQty(item.data.quantity)
-                setCatId(item.data.category)
-                setBrandId(item.data.brand)
-                setColors(item.data.availableColors)
+            if(item){
+                setImages(item.data?.images)
+                setProdName(item.data?.title)
+                setProdDes(item.data?.description)
+                setPriceBefore(item.data?.price)
+                setQty(item.data?.quantity)
+                setCatId(item.data?.category)
+                setBrandId(item.data?.brand)
+                setColors(item.data?.availableColors)
             }
         }catch(e){
             
@@ -190,16 +190,12 @@ const UpdateProductHook = (id) => {
           setProdDes("")
           setCatId(0)
           setBrandId(0)
-          setPriceBefore("price before discount")
+          setPriceBefore("price")
           setPriceAfter("price after discount")
           setSelectedSubId([])
-          setQty("available quantity")
+          setQty("Available quantity")
           setImages({})
           setColors([])
-
-          setTimeout(() => {
-            setLoading(true)
-          }, 1500);
           if(updateProductState){
             if(updateProductState.status===200){
               Notify("Data updated","success")

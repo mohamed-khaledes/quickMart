@@ -6,23 +6,36 @@ import Notify from '../UseNotification'
 const SubCategoryHook = () => {
     const [id,setId] = useState("0")
     const [name,setName] = useState("")
+    const [categories,setCategories] = useState([])
+    const [getLoading,setGetLoading] = useState(true)
     const [loading,setLoading] = useState(true)
-  
-    //selectors for category
-    const category = useSelector(state => state.categoryReducer.category)
-    const categoryLoading = useSelector(state => state.categoryReducer.loading)
-  
+    const [isPress,setIsPress] = useState(false)
     const dispatch = useDispatch()
-      useEffect(()=>{
-        if(!navigator.onLine){
-            Notify("check your internet connection","warn")
-        }
-        dispatch(getAllCategoryAction())
-      },[categoryLoading])
-      
-      // selectors for subcategory
-      const subCategory = useSelector(state =>state.subCategoryReducer.subCategory)
+    //selectors for category
+    const allCategories = useSelector(state => state.categoryReducer.allCategories)
+    // const categoryLoading = useSelector(state => state.categoryReducer.loading)
+    // selectors for subcategory
+    const subCategory = useSelector(state =>state.subCategoryReducer.subCategory)
     //   const subCLoading = useSelector(state =>state.subCategoryReducer.loading)
+    
+    const getData = async()=>{
+      setGetLoading(true)
+      await dispatch(getAllCategoryAction())
+      setGetLoading(false)
+    }
+      useEffect(()=>{
+        getData()
+      },[])
+      useEffect(()=>{
+        if(getLoading===false){
+          if(allCategories){
+            setCategories(allCategories?.data)
+          }else{
+            setCategories([])
+          }
+        }
+      },[getLoading])
+    
     //===================================================================
     const onChangeName =(e)=>{
         e.persist()
@@ -37,13 +50,11 @@ const SubCategoryHook = () => {
     //start handle submit function
     const handleSubmit =async(e)=>{
       e.preventDefault()
-        if(!navigator.onLine){
-            Notify("check your internet connection","warn")
-        }
         if(id==="0" || name===""){
           Notify("Please complete the data","warn")
         }else{
           setLoading(true)
+          setIsPress(true)
           await dispatch(subCategoryAction(
             {
               "name":name,
@@ -51,26 +62,28 @@ const SubCategoryHook = () => {
            }
           ))
           setLoading(false)
+          setIsPress(false)
         }
     }
     //===================================================================
       // start useeffect to handle response state
       useEffect(()=>{
         if(loading === false){
-          setName("")
-          setId("0")
-          if(subCategory.status === 201){
-            Notify("Data added","success")
-          }else if(subCategory === "errorAxiosError: Request failed with status code 400"){
-            Notify("this name is duplicated please write another name","warn")
-          }else{
-            Notify("there is a problem","warn")
+          if(subCategory){
+            if(subCategory?.status === 201){
+              setName("")
+              setId("0")
+              Notify("Data added","success")
+            }else if(subCategory?.status===400){
+              Notify(subCategory?.data?.message,"error")
+            }else{
+              Notify("there is a problem","error")
+            }
           }
         }
-        setLoading(true)
       },[loading])
 
-      return [name,hadleChange,handleSubmit,onChangeName,categoryLoading,category]
+      return [name,hadleChange,handleSubmit,onChangeName,loading,getLoading,isPress,categories,id]
 }
 
 export default SubCategoryHook
